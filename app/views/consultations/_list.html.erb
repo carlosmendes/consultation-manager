@@ -1,0 +1,21 @@
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Patient</th>
+      <th>Doctor</th>
+      <th>Location</th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% consultations.each do |consultation| %>
+      <tr>
+        <td><%= link_to consultation.patient.name, consultation.patient %></td>
+        <td><%= link_to consultation.doctor.name, consultation.doctor %></td>
+        <td><%= consultation.location %></td>
+        <td><%= link_to 'Show', consultation %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

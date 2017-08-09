@@ -1,0 +1,13 @@
+<p id="notice"><%= notice %></p>
+<h1>Doctor Info</h1>
+<p>
+  <strong>Name:</strong>
+  <%= @doctor.name %>
+</p>
+
+<%= link_to 'Edit', edit_doctor_path(@doctor) %> |
+<%= link_to 'Back', doctors_path %>
+
+<h2>Consultations</h2>
+
+<%= render 'consultations/list', consultations: @doctor.consultations  %>
