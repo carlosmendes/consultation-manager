@@ -5,6 +5,7 @@
   <%= @doctor.name %>
 </p>
 
+<%= link_to 'New Consultation', new_consultation_path(doctor_id: @doctor.id) %> |
 <%= link_to 'Edit', edit_doctor_path(@doctor) %> |
 <%= link_to 'Back', doctors_path %>
 

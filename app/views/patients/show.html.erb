@@ -6,6 +6,7 @@
   <%= @patient.name %>
 </p>
 
+<%= link_to 'New Consultation', new_consultation_path(patient_id: @patient.id) %> |
 <%= link_to 'Edit', edit_patient_path(@patient) %> |
 <%= link_to 'Back', patients_path %>
 
